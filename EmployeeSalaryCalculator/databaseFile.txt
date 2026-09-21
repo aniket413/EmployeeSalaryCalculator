@@ -1,0 +1,18 @@
+﻿Scaffold-DbContext "Server=SURAJ; Database=DailyTask; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Table TblEmployeeSalary -force
+
+
+
+
+Create Table TblEmployeeSalary(
+	EmployeeId int identity primary key,
+	EmployeeName varchar(50),
+	Department varchar(50),
+	Designation varchar(50),
+	BasicSalary Decimal(15,2),
+	HouseRentAllowance Decimal(15,2),
+	DearnessAllowance Decimal(15,2),
+	ProvidentFund Decimal(15,2),
+	GrossSalary Decimal(15,2),
+	NetSalary Decimal(15,2),
+)
+select * from TblEmployeeSalary;
