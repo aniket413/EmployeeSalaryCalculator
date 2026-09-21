@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeSalaryCalculator.Models;
 
-public partial class DailyTaskContext : DbContext
+public partial class EmpSalaryContext : DbContext
 {
-    public DailyTaskContext()
+    public EmpSalaryContext()
     {
     }
 
-    public DailyTaskContext(DbContextOptions<DailyTaskContext> options)
+    public EmpSalaryContext(DbContextOptions<EmpSalaryContext> options)
         : base(options)
     {
     }
@@ -19,13 +19,13 @@ public partial class DailyTaskContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=SURAJ; Database=DailyTask; Trusted_Connection=True; TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-MNSU8OR\\SQLEXPRESS; Database=EmpSalary; Trusted_Connection=True; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<TblEmployeeSalary>(entity =>
         {
-            entity.HasKey(e => e.EmployeeId).HasName("PK__TblEmplo__7AD04F1133AACAFA");
+            entity.HasKey(e => e.EmployeeId).HasName("PK__TblEmplo__7AD04F1188C3BB62");
 
             entity.ToTable("TblEmployeeSalary");
 

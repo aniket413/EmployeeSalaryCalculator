@@ -7,3 +7,4 @@ namespace EmployeeSalaryCalculator.Models
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
+//''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

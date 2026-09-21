@@ -5,10 +5,10 @@ namespace EmployeeSalaryCalculator.Controllers
 {
     public class EmployeeController : Controller
     {
-        DailyTaskContext db;
+        EmpSalaryContext db;
         public EmployeeController()
         {
-            db = new DailyTaskContext();
+            db = new EmpSalaryContext();
         }
         public IActionResult Index()
         {
